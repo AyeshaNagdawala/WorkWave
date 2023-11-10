@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photographer</title>
+    <link rel="stylesheet" href="photographer.css">
+</head>
+
+<body>
+    <!-- Nav bar   -->
+    <nav>
+        <div class="flex main-nav">
+            <a href="#" class="company-logo img"><img src="./static/logo.png" alt="company-logo"></a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li><a href="home-page.html" class="hover-link">Homepage</a></li>
+                    <li><a href="/dashboard" class="hover-link">Dashboard</a></li>
+                    <li><a href="about-us.html" class="hover-link">About Us</a></li>
+
+                    <li><a href="/logout" class="hover-link primary-button">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="container flex header-section">
+            <h1>Choose the Service</h1>
+            <!-- <i class="fa-solid fa-user-doctor header-symbol"></i> -->
+        </div>
+    </header>
+    <!-- Lawyer Profiles -->
+
+    <section class="Patient-Profiles-Section">
+        <div class="container">
+            <div class="patient-area flex">
+                <div class="patient-card flex">
+                    <img src="static/header-image.jpg" alt="">
+                    <div class="patient-text">
+                        <h2>Fashion Photographer</h2>
+                        <p>Fashion photography is a genre of photography that is concerned with portraying clothing and other fashion items.</p>
+                        <a href="#" class="primary-button">Select<i class="fa-solid fa-right-long"></i></a>
+                    </div>
+                </div>
+                <div class="patient-card flex">
+                    <img src="static/header-image.jpg" alt="">
+                    <div class="patient-text">
+                        <h2>Sports Photographer</h2>
+                        <p>Sports photographers take photos of athletes during practice sessions or sporting events.</p>
+                        <a href="/FamilyLaw" class="primary-button">Select<i class="fa-solid fa-right-long"></i></a>
+                    </div>
+                </div>
+
+                <div class="patient-card flex">
+                    <img src="static/header-image.jpg" alt="">
+                    <div class="patient-text">
+                        <h2>Documentary Photographer</h2>
+                        <p>Documentary photography usually refers to a popular form of photography used to chronicle events or environments both significant and relevant to history and historical events as well as everyday life.</p>
+                        <a href="#" class="primary-button">Select<i class="fa-solid fa-right-long"></i></a>
+                    </div>
+                </div>
+
+                <div class="patient-card flex">
+                    <img src="static/header-image.jpg" alt="">
+                    <div class="patient-text">
+                        <h2>Travel Photographer</h2>
+                        <p>Travel photographers work in various locations around the world to photograph different people, cultures, and landmarks. </p>
+                        <a href="#" class="primary-button">Select<i class="fa-solid fa-right-long"></i></a>
+                    </div>
+                </div>
+
+                <div class="patient-card flex">
+                    <img src="static/header-image.jpg" alt="">
+                    <div class="patient-text">
+                        <h2>Videographer</h2>
+                        <p>Videographers create high-quality videos for a range of applications. </p>
+                        <a href="#" class="primary-button">Select<i class="fa-solid fa-right-long"></i></a>
+                    </div>
+                </div>
+
+                <div class="patient-card flex">
+                    <img src="static/header-image.jpg" alt="">
+                    <div class="patient-text">
+                        <h2>Photojournalist</h2>
+                        <p>Photojournalists take photos of events and people to use in news publications.</p>
+                        <a href="#" class="primary-button">Select<i class="fa-solid fa-right-long"></i></a>
+                    </div>
+                </div>
+
+                <div class="patient-card flex">
+                    <img src="static/header-image.jpg" alt="">
+                    <div class="patient-text">
+                        <h2>Advertising Photographer</h2>
+                        <p>Advertising photography is a commercial venture where images are used for advertising purposes.</p>
+                        <a href="#" class="primary-button">Select<i class="fa-solid fa-right-long"></i></a>
+                    </div>
+                </div>
+
+                <div class="patient-card flex">
+                    <img src="static/header-image.jpg" alt="">
+                    <div class="patient-text">
+                        <h2>Portrait Photographer</h2>
+                        <p>Portrait photographers take pictures of people and capture their personalities with different types of lighting, backdrops, and poses </p>
+                        <a href="#" class="primary-button">Select<i class="fa-solid fa-right-long"></i></a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/cb88b54bf5.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
