@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        
+        <title>Rating</title>
+        <link  rel="stylesheet" href="{{worker_id}}/static/table.css">
+    </head>
+    <body>
+        <nav>
+            <div class="container flex main-nav">
+                <a href="#" class="company-logo img"><img src="{{worker_id}}/static/logo-no-background.png" alt="company-logo"></a>
+                <div class="nav-links">
+                    <ul class="flex">
+                        <li><a href="/"class="hover-link">Homepage </a></li>
+                        <li><a href="/profdashboard" class="hover-link">Dashboard </a></li>
+                        <li><a href="/aboutus"class="hover-link">About Us <i class="fa-sharp fa-solid fa-angle-down"></i></a></li>
+                        <li><a href="/logout"class="hover-link secondary-button">Logout</a></li>
+                        
+                      </ul>
+                </div>
+            </div>
+          </nav>
+        
+            <div class="section">
+<div class="header">
+    <h2>Rating</h2>
+
+</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Request ID</th> 
+                            <th>Worker ID</th> 
+                            <th>Worker Name</th>
+                            <th>Rating</th>
+                     
+
+                         
+                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        {% for i in list %}
+                        <!-- <form action="/makequot" method="post"> -->
+                            <tr>
+                               
+                                <td>{{i.req_id}}</td>
+                                <td>{{i.prof_id}}</td> 
+                                <td>{{i.name_p}}</td>
+                                <td>{{i.rating}}</td>
+                         
+                           
+                                    
+                       
+
+                            </tr>
+                     
+                        {% endfor %}
+                    
+                    </tbody>
+                </table>
+<!-- 
+                <div class="text">
+                    <h1>Enter Quotation</h1>
+                 </div>
+                <label for="quot" class="form-label">Location</label>
+                <input type="text" class="form-control" id="loc" name="loc" > -->
+
+            </div>
+        </div>
+    </body>
+</html>

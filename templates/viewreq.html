@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="static/table.css" rel="stylesheet">
+        <title>RECEIVED QUOTATIONS</title>
+    </head>
+    <body>
+        <nav>
+            <div class="container flex main-nav">
+                <a href="#" class="company-logo img"><img src="static\logo-no-background.png" alt="company-logo"></a>
+                <div class="nav-links">
+                    <ul class="fle">
+                        <li><a href="/"class="hover-link">Homepage </a></li>
+                        <li><a href="/clientdashboard" class="hover-link">Dashboard </a></li>
+                        <li><a href="/aboutus"class="hover-link">About Us <i class="fa-sharp fa-solid fa-angle-down"></i></a></li>
+                        <li><a href="/faq" class="hover-link">FAQ </a></li>
+                        <li><a href="/logout"class="hover-link primary-button">Log out</a></li>
+                        
+                      </ul>
+                </div>
+            </div>
+          </nav>
+        
+            <div class="section">
+<div class="header">
+    <h2>RECEIVED QUOTATIONS</h2>
+
+</div>
+               
+            <table>
+                <thead>
+                    <tr>
+
+                        <th>Request ID</th>
+                        <th>Client ID</th>
+                        <th>Client Name</th>
+                        <th>Accept Request</th>
+                     
+                      
+                    </tr>
+                </thead>
+                <tbody>
+                
+                    {% for i in list %}
+                    <form action="/updatestatus" method="post">
+                        <tr >
+                            <td ><input type="text"  class="form-control" id="req_id" name="req_id"   value="{{i.req_id}}"
+                                readonly ></td>
+                                <td><input type="text" class="form-control " id="client_id" name="client_id"   value="{{i.client_id}}"
+                                    readonly ></td>
+                            <td>{{i.name_c}}</td>
+       
+                            <td><button type="submit" class="btn-btn-primary">Accept</button></td>
+                            </tr>
+                        </form>    
+                    {% endfor %}
+                </tbody>
+            </table>
+
+
+
+            </div>
+        </div>
+    </body>
+</html>

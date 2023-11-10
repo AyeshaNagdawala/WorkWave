@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Developer</title>
+    <link rel="stylesheet" href="static/Lawyer.css">
+</head>
+<body>
+  <!-- Nav bar   -->
+  <nav>
+    <div class="flex main-nav">
+        <a href="#" class="company-logo img"><img src="static/logo.png" alt="company-logo"></a>
+        <div class="nav-links">
+            <ul class="flex">
+                <li><a href="home-page.html"class="hover-link">Homepage</a></li>
+
+                <li><a href="/clientdashboard"class="hover-link">Dashboard</a></li>
+                <li><a href="/aboutus"class="hover-link">About Us</a></li>
+                <li><a href="/logout" class="hover-link primary-button">Log Out</a></li>
+              </ul>
+        </div>
+    </div>
+  </nav>
+  <header>
+    <div class="container flex header-section">
+        <h1>Choose the Service</h1>
+        <!-- <i class="fa-solid fa-user-doctor header-symbol"></i> -->
+    </div>
+  </header>
+<!-- Lawyer Profiles -->
+
+<section class="Patient-Profiles-Section">
+    <div class="container">
+        <div class="patient-area flex">
+
+
+            {% for i in list %}
+            <form action="/sendreq" method="post">
+          <div class="patient-card flex">
+            <img src="static/header-image.jpg" alt="">
+            <div class="patient-text">
+              <h2>Name : {{i.name}}</h2>
+    
+             <input type="text" class="FamilyLawReq" id="prof_id" name="prof_id"   value="{{i.prof_id}}"
+                                    readonly >
+              <h4>Work Experience : {{i.workexp}} years</h4>
+              <h4>Location : {{i.address}}</h4>
+              <!-- <p>Family law is an area of the law that deals with family matters and domestic relations.</p> -->
+              <button type="submit" class="btn-btn-primary">Submit</button>
+            </div>
+            </div>
+          </form>
+            {% endfor %}
+
+            
+
+        </div>
+    </div>
+</section>
+    <script src="https://kit.fontawesome.com/cb88b54bf5.js" crossorigin="anonymous"></script>  
+</body>
+</html>

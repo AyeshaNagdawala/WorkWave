@@ -1,0 +1,145 @@
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="static/table.css" rel="stylesheet">
+        <script>
+            function fieldComplete(divToShow) {
+  document.getElementById(divToShow).style.display = "block";
+}
+
+function fieldComplete1(condition) {
+  var x = document.getElementById("healthy");
+  var y = document.getElementById("typeWorkout");
+  var z = document.getElementById("workoutLength");
+  if (condition == 0) {
+    x.style.display = "block";
+    y.style.display = "none";
+    z.style.display = "none";
+  }
+  else if (condition == 1) {
+    y.style.display = "block";
+    z.style.display = "block";
+  }
+}
+
+function fieldComplete2(condition) {
+  var x = document.getElementById("unhealthyFood");
+  var y = document.getElementById("proudAchievement");
+  if (condition == 0) {
+    x.style.display = "block";
+  }
+  else if (condition == 1) {
+    x.style.display = "none";
+    y.style.display = "block";
+  }
+}
+        </script>
+        <title>CURRENT WORK</title>
+    </head>
+    <body>
+        <nav>
+            <div class="container flex main-nav">
+                <a href="#" class="company-logo img"><img src="static/logo.png" alt="company-logo"></a>
+                <div class="nav-links">
+                    <ul class="flex">
+                        <li><a href="homepage.html"class="hover-link">Homepage </a></li>
+                        <li><a href="/workerdashboard" class="hover-link">Dashboard </a></li>
+                        <li><a href="/aboutus"class="hover-link">About Us <i class="fa-sharp fa-solid fa-angle-down"></i></a></li>
+                        <li><a href="/logout"class="hover-link primary-button">Log out</a></li>
+                      </ul>
+                </div>
+            </div>
+          </nav>
+        
+            <div class="section">
+<div class="header">
+    <h2>CURRENT SERVICES</h2>
+
+</div>
+                <table>
+                    <thead>
+                        <tr>
+                          <th>Request ID</th>
+                          
+                            <th>Professional's ID</th>
+                            <th>Professional's Name</th>
+                            <th>Professional's Contact Number</th>
+                            <th>Client Name</th>
+                        
+                            <th>Complete?</th>
+                            <th>Change Completion Status</th>
+                            <th>Provide Rating Out Of 5</th>
+                            <th>Rate</th>
+                         
+                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        {% for i in list %}
+                        <form action="/changecompletionc" method="post">
+                            <tr>
+                              <td><input type="text" class="form-control" id="req_id" name="req_id"   value="{{i.req_id}}"
+                                readonly ></td>
+                               
+                                <td><input type="text" class="form-control" id="prof_id" name="prof_id"   value="{{i.prof_id}}"
+                                    readonly ></td>
+                                <!-- <td><input type="text" class="form-control" id="worker_id" name="worker_id"   value="{{i.worker_id}}"
+                                    readonly ></td> -->
+                                <td>{{i.name_p}}</td>
+
+                                <td>{{i.contact_p}}</td>
+                                <td>{{i.name_c}}</td>                           
+                           
+                                <td>{{i.complete}}</td>
+                                <!-- <td>  <input type="text" class="form-control" id="quot" name="quot" ></td> -->
+                                <td><button type="submit" class="btn-btn-primary">Change</button></td> 
+                                
+                                <!-- <form action="/rateworker" method="post"> -->
+                                <td>   <input
+                                    id="rateworker"
+                                    type="range"
+                                    value="{{i.rating}}"
+                                    min="0"
+                                    max="5"
+                                    step="0.1"
+                                    name="rateworker"
+                                    oninput="this.nextElementSibling.value = this.value"
+                                    class="slider"
+                                    
+                                  />
+                                  <output>{{i.rating}}</output></td>
+
+                              
+
+                                <td><button type="submit" class="btn-btn-primary">Submit</button></td>
+                               
+                                <!-- </form>    
+                        -->
+
+                            </tr>
+                        </form>
+                        {% endfor %}
+                    
+                    </tbody>
+                </table>
+<!-- 
+                <div class="text">
+                    <h1>Enter Quotation</h1>
+                 </div>
+                <label for="quot" class="form-label">Location</label>
+                <input type="text" class="form-control" id="loc" name="loc" > -->
+
+            </div>
+        </div>
+    </body>
+</html>

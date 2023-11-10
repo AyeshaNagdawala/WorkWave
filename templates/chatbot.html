@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="src="{{request.host_url}}static/chatbot.css">
+  </head>
+  <body>
+    <nav>
+        <div class="container flex main-nav">
+            <a href="#" class="company-logo img"><img src="./static/logo.png" alt="company-logo"></a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li><a href="home-page.html" class="hover-link">Homepage</a></li>
+                    <li><a href="/dashboard" class="hover-link">Dashboard</a></li>
+                    <li><a href="about-us.html" class="hover-link">About Us</a></li>
+                    <li><a href="/logout" class="hover-link primary-button">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <link rel="stylesheet" href="{{request.host_url}}static/DashboardStyle.css">
+    <div>
+        <div class="row">
+            <div class="col-md-3">
+                <div style="margin-top:20px;height:800px;width:100%;background-color:#000;">
+                   <div style="padding-top:30px;">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="{{request.host_url}}static/img/avatar_circle.png" style="border-radius:50%;width:40px;height:40px;margin:20px;"/>
+                        </div>
+                        <div class="col-md-10">
+                            <h4 style="color:white;margin-top:20px;margin-left:10px;">Welcome to our Chatbot</h4>
+                        </div>
+                    </div>
+                   
+                   </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div id="chatbotbox" style="padding:20px;">
+                    <div id="bot1">
+                        <div class="row">
+                            <div class="col-md-11">
+                                <p style="background-color:rgb(135,135,135,0.5);padding:10px;border-radius:20px;">Hey there ! How may I help you today.</p>
+                            </div>
+                            <div class="col-md-1">
+                                <img src="{{request.host_url}}static/img/chatbot.png" style="border-radius:50%;width:40px;height:40px;"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="user1">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <img src="{{request.host_url}}static/img/avatar_circle.png" style="border-radius:50%;width:40px;height:40px;margin:10px;"/>
+                            </div>
+                            <!-- <div class="col-md-11">
+                                <p id="answer" class="user1ans1" style="margin:10px;float:left;background-color:white;padding:10px;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                            </div> -->
+                            <div class="col-md-11">
+                                <p id="answer" class="user1ans1" style="margin:10px;float:left;background-color:white;padding:10px;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">How can I book a service?</p>
+                                <p id="answer" class="user1ans2" style="margin:10px;float:left;background-color:white;padding:10px;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Are the professionals listed on your platform verified?</p>
+                                <p id="answer" class="user1ans7" style="margin:10px;float:left;background-color:white;padding:10px;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">How can I leave a review for a service provider?</p>
+                                <p id="answer" class="user1ans8" style="margin:10px;float:left;background-color:white;padding:10px;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Can I add multiple services to my booking?</p>
+                                <p id="answer" class="user1ans4" style="margin:10px;float:left;background-color:white;padding:10px;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">How can I make a payment for the service?</p>
+                                <p id="answer" class="user1ans3" style="margin:10px;float:left;background-color:white;padding:10px;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Are there any discounts or promotions available?</p>
+                                <p id="answer" class="user1ans5" style="margin:10px;float:left;background-color:white;padding:10px;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Can I leave feedback or reviews for service providers?</p>
+                                <!-- <p id="answer" class="user1ans6" style="margin:10px;float:left;background-color:white;padding:10px;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Know more about us</p> </p>
+                                <p id="answer" class="user1ans2" style="margin:10px;float:left;background-color:white;padding:10px;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">I need help.</p>
+                                <p id="answer" class="user1ans7" style="margin:10px;float:left;background-color:white;padding:10px;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Tell me a joke.</p>
+                                <p id="answer" class="user1ans8" style="margin:10px;float:left;background-color:white;padding:10px;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Play some relaxing music.</p>
+                                <p id="answer" class="user1ans4" style="margin:10px;float:left;background-color:white;padding:10px;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Book an appointment</p>
+                                <p id="answer" class="user1ans3" style="margin:10px;float:left;background-color:white;padding:10px;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Take the anxiety test</p>
+                                <p id="answer" class="user1ans5" style="margin:10px;float:left;background-color:white;padding:10px;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Check out our commmunity</p>
+                                <p id="answer" class="user1ans6" style="margin:10px;float:left;background-color:white;padding:10px;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Know more about us</p>  -->
+                            </div>
+                        </div>
+                    </div>
+                 
+          
+                    <br>
+                   <!-- <div id="bot2b">
+                        <div class="row">
+                            <div class="col-md-11">
+                                <p style="background-color:rgb(135,135,135,0.5);padding:10px;border-radius:20px;">Do you wish to talk to an expert?</p>
+                            </div>
+                            <div class="col-md-1">
+                                <img src="{{request.host_url}}static/img/chatbot.png" style="border-radius:50%;width:40px;height:40px;"/>
+                            </div>
+                        </div>
+                    </div> -->
+
+
+                    <div id="user2b">
+                        <div class="row">
+                            <div class="col-md-11"> <p style="background-color:rgb(135,135,135,0.5);padding:10px;border-radius:20px;" >
+                                 Yes, we have a rigorous verification process for professionals listed on our platform. We ensure that they meet specific criteria and have the necessary qualifications and experience in their respective fields.</p>
+                            </div>
+                            <div class="col-md-1">
+                                <img src="{{request.host_url}}static/img/chatbot.png" style="border-radius:50%;width:40px;height:40px;"/>
+                            </div>
+                        </div>
+                       </div><br><br>
+
+
+                       <div id="bot3b">
+                        <div class="row">
+                            <div class="col-md-11">
+                                <p style="background-color:rgb(135,135,135,0.5);padding:10px;border-radius:20px;">Alright, please <a href = "https://pib.gov.in/PressReleasePage.aspx?PRID=1652240"><span>visit here</span></a> or call on 1800-599-0019. It is a 24x7 Toll-Free Mental Health Rehabilitation Helpline  </p>
+                            </div>
+                            <div class="col-md-1">
+                                <img src="{{request.host_url}}static/img/chatbot.png" style="border-radius:50%;width:40px;height:40px;"/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="bot3b2">
+                        <div class="row">
+                            <div class="col-md-11">
+                                
+                                <p style="background-color:rgb(135,135,135,0.5);padding:10px;border-radius:20px;" >Maybe some of these might help:
+                                <li>Calm you nerves by doing meditation. Here’s a <a href="https://youtu.be/O-6f5wQXSu8">link</a> to a video which might help. 
+                                </li>
+                                <li>Reading a book might help you figure things out.</li>
+                                <li>Spending some time in the woods can definitely help you.</li>
+                                <li> Learning some new skills might help you as well.</li>
+                                </p>
+                            </div>
+                            <div class="col-md-1">
+                                <img src="{{request.host_url}}static/img/chatbot.png" style="border-radius:50%;width:40px;height:40px;"/>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                    <div id="bot2c">
+                        <div class="row">
+                            <div class="col-md-11"> <p style="background-color:rgb(135,135,135,0.5);padding:10px;border-radius:20px;" >
+                                After receiving a service, you will have the option to leave a review and rating for the service provider. Simply log in to your account, go to the service's page, and leave your feedback in the designated review section.</p>
+                            </div>
+                            <div class="col-md-1">
+                                <img src="{{request.host_url}}static/img/chatbot.png" style="border-radius:50%;width:40px;height:40px;"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="bot4a">
+                        <div class="row">
+                            <div class="col-md-11"> <p style="background-color:rgb(135,135,135,0.5);padding:10px;border-radius:20px;" >
+                               To book a service, simply browse through our listings, select the desired service, choose a date and time, and follow the prompts to complete the booking process.</p>
+                            </div>
+                            <div class="col-md-1">
+                                <img src="{{request.host_url}}static/img/chatbot.png" style="border-radius:50%;width:40px;height:40px;"/>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="botmusic">
+                        <div class="row">
+                            <div class="col-md-11"> <p style="background-color:rgb(135,135,135,0.5);padding:10px;border-radius:20px;" >
+                                 Yes, you can add multiple services to your booking. During the booking process, you will have the option to select additional services or packages based on your preferences and needs.
+                                </p>
+                            </div>
+                            <div class="col-md-1">
+                                <img src="{{request.host_url}}static/img/chatbot.png" style="border-radius:50%;width:40px;height:40px;"/>
+                            </div>
+                        </div>
+                    </div>
+    
+<!-- here -->
+
+
+                    <div id="botappointment">
+                        <div class="row">
+                            <div class="col-md-11"> <p style="background-color:rgb(135,135,135,0.5);padding:10px;border-radius:20px;" >
+                                 We currently do not process payments directly through our website. Once you have selected a service and completed the booking process, you will receive instructions on how to make the payment. This may involve making a payment in person, via bank transfer, or using an external payment platform specified by the service provider. Please contact the service provider directly for further payment details and instructions.</p>
+                            </div>
+                            <div class="col-md-1">
+                                <img src="{{request.host_url}}static/img/chatbot.png" style="border-radius:50%;width:40px;height:40px;"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="bottest">
+                        <div class="row">
+                            <div class="col-md-11"> <p style="background-color:rgb(135,135,135,0.5);padding:10px;border-radius:20px;" >
+                                We occasionally offer discounts and promotions on certain services. Please check the individual service listings or our promotions page for any ongoing offers or special deals.
+                                </p>
+                            </div>
+                            <div class="col-md-1">
+                                <img src="{{request.host_url}}static/img/chatbot.png" style="border-radius:50%;width:40px;height:40px;"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="botcommunity">
+                        <div class="row">
+                            <div class="col-md-11"> <p style="background-color:rgb(135,135,135,0.5);padding:10px;border-radius:20px;" >
+                                Yes, we encourage users to leave feedback and reviews for service providers. After receiving a service, you will have the opportunity to share your experience and rate the service provider. Your feedback can help other users make informed decisions when choosing a service.</p>
+                            </div>
+                            <div class="col-md-1">
+                                <img src="{{request.host_url}}static/img/chatbot.png" style="border-radius:50%;width:40px;height:40px;"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="botaboutus">
+                        <div class="row">
+                            <div class="col-md-11">
+                                <!-- <p style="background-color:rgb(135,135,135,0.5);padding:10px;border-radius:20px;">Alright, <a href = "https://open.spotify.com/playlist/6gCC8kozvUlLGTzl2YO2MR" >click here</a></p> -->
+                                <p style="background-color:rgb(135,135,135,0.5);padding:10px;border-radius:20px;">Alright, please <a href = "/aboutus" >click here </a> to know more about us. </p>
+                            </div>
+                            <div class="col-md-1">
+                                <img src="{{request.host_url}}static/img/chatbot.png" style="border-radius:50%;width:40px;height:40px;"/>
+                            </div>
+                        </div>
+                    </div>
+
+               </div><br><br>
+
+
+
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{request.host_url}}static/chatbot.js"></script>
+
+  </body>
+ </html>

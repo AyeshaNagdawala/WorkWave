@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>client</title>
+    <link rel="stylesheet" href="static/clientform.css">
+    <script src="https://kit.fontawesome.com/8263f3c691.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+    <meta name='viewport' content="width=device-width,initial-scale=1.0"> <!--imp for media queries -->
+
+</head>
+
+<body>
+
+    <div class="mian">
+        <!-- <nav>
+      <div class="fle main-nav" >
+          <a href="#" class="company-logo img"><img src="assets/logo final.png"  alt="company-logo"></a>
+          <div class="nav-links">
+              <ul class="fle">
+                  <li><a href="about-us.html"class="hover-link">Home</a></li>
+                  <li><a href="about-us.html"class="hover-link">About Us</a></li>
+                  <li><a href="faqs.html"class="hover-link">FAQ's</a></li>
+                  <li><a href="#"class="hover-link primary-button">Sign Up</a></li>
+                  <li><a href="#"class="hover-link secondary-button">Log In</a></li>
+                </ul>
+          </div>
+      </div>
+  </nav> -->
+
+
+        <div class="container form-container">
+            <div class="main">
+                <div class="text">
+                    <h3 class="form-title">Enter your Details</h3>
+                </div>
+                <form action="/clientform" method="post">
+                    <div class="mb-3">
+                        <div class="mb">
+                            <label for="name" id="username" class="form-label">Username<span
+                                    class="mb-3-text-muted"></span> </label>
+                        </div>
+                        <div class="content">
+                            <input type="text" class="form-control" placeholder=" username" name="username">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="mb">
+                            <label for="name" id="Name2" class="form-label">Name<span class="mb-3-text-muted"></span>
+                            </label>
+                        </div>
+                        <div class="content">
+                            <input type="text" class="form-control" placeholder=" Name" id="Name" name="Name">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="mb">
+                            <label for="contact" class="form-label">Contact Number</label>
+                        </div>
+                        <div class="content">
+                            <input type="text" placeholder=" 10 digit no." class="form-control" id="contact"
+                                name="contact" style="font-size: 15px;">
+                        </div>
+                    </div>
+
+                    <div class="mb" method="post">
+                        <label>Address</label><br>
+                        <textarea class="form-control" name="address" id="address" placeholder="address" cols="50%" rows="2"
+                            style="font-size: 15px;"></textarea>
+                    </div>
+
+
+
+                    <button href="#" onclick="sendAlert()">Submit</button>
+
+                </form>
+               
+
+
+            </div>
+
+
+
+        </div>
+        <!-- <span>Already have an account? <a href="#" class="link login-link">Login</a> </span> -->
+
+        <!-- <div class="form-link">
+    <span>Already have an account? <a href="#" class="link login-link">Login</a> </span>
+</div> -->
+
+    </div>
+    <script src="https://kit.fontawesome.com/2b9cdc1c9a.js" crossorigin="anonymous"></script>
+
+    <script>
+        function sendAlert() { // console.log("button is working");
+            alert("Your Form is submitted!");
+        }
+    </script>
+
+</body>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="static/table.css" rel="stylesheet">
+        <title>CURRENT WORK</title>
+    </head>
+    <body>
+        <nav>
+            <div class="container flex main-nav">
+                <a href="#" class="company-logo img"><img src="static\logo-no-background.png" alt="company-logo"></a>
+                <div class="nav-links">
+                    <ul class="flex">
+                        <li><a href="/"class="hover-link">Homepage </a></li>
+                        <li><a href="/workerdashboard" class="hover-link">Dashboard </a></li>
+                        <li><a href="/aboutus"class="hover-link">About Us <i class="fa-sharp fa-solid fa-angle-down"></i></a></li>
+                        <li><a href="/logout"class="hover-link secondary-button">Log Out</a></li>
+                     
+                      </ul>
+                </div>
+            </div>
+          </nav>
+        
+            <div class="section">
+<div class="header">
+    <h2>CURRENT SERVICES</h2>
+
+</div>
+                <table>
+                    <thead>
+                        <tr>
+
+                            <th>Client's ID</th>
+                            <th>Client's Name</th>
+                            <th>Client's Contact Number</th>
+                            <th>Professional's Name</th>
+                            <th>Completion Status</th>
+                            <th>Rating</th>
+                          
+
+                            <!-- <th>Submit</th> -->
+
+                         
+                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        {% for i in list %}
+                        <!-- <form action="/makequot" method="post"> -->
+                            <tr>
+                              
+                                <td>{{i.client_id}}</td>
+                                
+                                <td>{{i.name_c}}</td>
+                            
+                                <td>{{i.contact_c}}</td>
+                              
+                                <td>{{i.name_p}}</td>
+                            
+                                <td>{{i.complete}}</td>
+                                <td>{{i.rating}}</td>
+                              
+                                <!-- <td>  <input type="text" class="form-control" id="quot" name="quot" ></td>
+                                <td><button type="submit" class="btn-btn-primary">Submit</button></td> -->
+                                    
+                       
+
+                            </tr>
+                        <!-- </form> -->
+                        {% endfor %}
+                    
+                    </tbody>
+                </table>
+<!-- 
+                <div class="text">
+                    <h1>Enter Quotation</h1>
+                 </div>
+                <label for="quot" class="form-label">Location</label>
+                <input type="text" class="form-control" id="loc" name="loc" > -->
+
+            </div>
+        </div>
+    </body>
+</html>

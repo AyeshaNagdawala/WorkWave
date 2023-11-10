@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/profdashboard.css">
+    <title>prof dashboard</title>
+</head>
+<body>
+  <nav>
+    <div class="flex main-nav" style=" margin-top: 0px;">
+      <a href="#" class="company-logo img"><img src="static/logo.png" alt="company-logo"></a>
+      <div class="nav-links">
+        <ul class="fle">
+          <li><a href="/" class="hover-link">Home</a></li>
+          <li><a href="/aboutus" class="hover-link">About Us</a></li>
+          <li><a href="/faq" class="hover-link">FAQ's</a></li>
+          <li><a href="#big-feature-section" class="hover-link primary-button">Sign Up/Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="container">
+        <div class="frame">
+            <div class="profile">
+             
+              <div class="header-text" >
+                <h2>Professional's Dashboard</h2>
+              </div>
+
+
+
+
+            </div>
+            <div class="cards flex" >
+                <div class="card1"> 
+                      <div class="button" type="button" onclick="window.location.href='/viewprofilep'">
+                        <span>
+                            <h2>VIEW PROFILE</h2>
+                            
+                        </span>
+
+                      </div>
+                </div>
+                <div class="card2">
+                    <div class="button" type="button" onclick="window.location.href='/viewreq'" >
+                        <span>
+                            <h2>VIEW REQUEST</h2>
+
+                        </span>
+
+                      </div>
+
+                </div>
+                <div class="card2">
+                    <div class="button" type="button" onclick="window.location.href='/myworkp'">
+                        <span>
+                            <h2> CURRENT SERVICES </h2>
+
+                        </span>
+
+                      </div>
+
+                </div>
+                <div class="card2">
+                    <div class="button" type="button" onclick="window.location.href='/rating/{{prof_id}}'">
+                        <span>
+                            <h2>PAST WORK </h2>
+
+                        </span>
+
+                      </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer Section -->
+  <footer>
+    <div class="con flex footer-container">
+      <a href="#" class="company-logo">
+        <img src="static/logo.png" alt="company-logo">
+        <p class="footer-text">Work Wave is a platform for Mumbai <br>workers connect with Hirers<br>all across Mumbai
+          to find jobs.</p>
+      </a>
+      <div class="link-coloumn flex">
+        <h4>Pages</h4>
+        <a href="homepage.html" class="hover-link footer-link">Home</a>
+        <a href="about-us.html" class="hover-link footer-link">About Us </a>
+        <a href="faqs.html" class="hover-link footer-link">FAQs</a>
+        <a href="homepage.html" class="hover-link footer-link">How It Works</a>
+      </div>
+
+      <div class="link-coloumn flex">
+        <h4>Made By</h4>
+        <a href="https://github.com/ayeshanagdawala/" class="hover-link footer-link">Ayesha Nagdawala</a>
+        <a href="https://github.com/meetalik8/" class="hover-link footer-link">Meetali Kapse</a>
+        <a href="https://github.com/mamta137/" class="hover-link footer-link">Mamta Gupta</a>
+        
+      </div>
+
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="static/viewprofilep.css" rel="stylesheet">
+    <title>Professionals's details</title>
+</head>
+
+<body>
+    <nav>
+        <div class="flex main-nav" style=" margin-top: 0px;">
+            <a href="#" class="company-logo img"><img src="static/logo.png" alt="company-logo"></a>
+            <div class="nav-links">
+                <ul class="fle">
+                    <li><a href="/" class="hover-link">Home</a></li>
+                    <li><a href="/profdashboard" class="hover-link">Dashboard</a></li>
+                    <li><a href="/aboutus" class="hover-link">About Us</a></li>
+                    <li><a href="/faq" class="hover-link">FAQ's</a></li>
+                    <li><a href="/logout" class="hover-link primary-button">Log out</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="section">
+        <div class="header">
+            <h2>VIEW DETAILS</h2>
+
+        </div>
+
+        <div class="nn">
+            {% for i in list %}
+            Username : {{i.username}}
+            <br>
+            Name : {{i.name}}
+            <br>
+           
+
+            <!-- <br>
+                        ID Link : {{i.idlink}} -->
+
+            Address : {{i.address}}
+            <br>
+
+            Contact Number : {{i.contact}}
+            <br>
+
+
+
+
+
+            <!-- 
+                               
+                                <td> <a href="client_details?id={{i.id}}" >View Prescription</a></td>
+                                <td> <a href="client_report?id={{i.id}}" >View Report</a></td>
+                               -->
+
+
+            {% endfor %}
+        </div>
+
+    </div>
+    </div>
+
+</body>
+
+</html>

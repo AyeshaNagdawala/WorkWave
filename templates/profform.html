@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prof form</title>
+    <link rel="stylesheet" href="static/clientform.css">
+    <script src="https://kit.fontawesome.com/8263f3c691.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+    <meta name='viewport' content="width=device-width,initial-scale=1.0"> <!--imp for media queries -->
+
+</head>
+
+<body>
+
+    <div class="mian">
+        <!-- <nav>
+      <div class="fle main-nav" >
+          <a href="#" class="company-logo img"><img src="assets/logo final.png"  alt="company-logo"></a>
+          <div class="nav-links">
+              <ul class="fle">
+                  <li><a href="about-us.html"class="hover-link">Home</a></li>
+                  <li><a href="about-us.html"class="hover-link">About Us</a></li>
+                  <li><a href="faqs.html"class="hover-link">FAQ's</a></li>
+                  <li><a href="#"class="hover-link primary-button">Sign Up</a></li>
+                  <li><a href="#"class="hover-link secondary-button">Log In</a></li>
+                </ul>
+          </div>
+      </div>
+  </nav> -->
+
+
+        <div class="container form-container">
+            <div class="main">
+                <div class="text">
+                    <h3 class="form-title">Enter your Details</h3>
+                </div>
+                <form action="/profform" method="post">
+                    <div class="mb-3">
+                        <div class="mb">
+                            <label for="name" id=" username" class="form-label">Username<span
+                                    class="mb-3-text-muted"></span> </label>
+                        </div>
+                        <div class="content">
+                            <input type="text" class="form-control" placeholder=" username" name="username">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="mb">
+                            <label for="name" id="Name1" class="form-label">Name<span class="mb-3-text-muted"></span>
+                            </label>
+                        </div>
+                        <div class="content">
+                            <input type="text" class="form-control" placeholder=" Name" id="Name" name="Name">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="mb">
+                            <label for="contact" class="form-label">Contact Number</label>
+                        </div>
+                        <div class="content">
+                            <input type="text" placeholder=" 10 digit no." class="form-control" id="contact"
+                                name="contact" style="font-size: 15px;">
+                        </div>
+                    </div>
+                    <!-- <div class="mb-3">
+                        <div class="mb">
+                            <label for="Profession type" id="Profession type" class="form-label">Profession Type<span class="mb-3-text-muted"></span>
+                            </label>
+                        </div>
+                        <div class="content">
+                            <input type="text" class="form-control" placeholder= " Profession Type" name="prof_type" id="prof_type">
+                        </div>
+                    </div> -->
+                    <!-- <div class="mb-3">
+                        <div class="mb">
+                            <label for="specialization" id="specialization" class="form-label">specialization<span class="mb-3-text-muted"></span>
+                            </label>
+                        </div>
+                        <div class="content">
+                            <input type="text" class="form-control" placeholder=" specialization" name="specialization">
+                        </div>
+                    </div> -->
+                    <div class="mb-3">
+                        <div class="mb">
+                            <label for="contact" class="form-label">Profession Type</label>
+                        </div>
+                    <select name="prof_type" id="prof_type">
+                        <option disable selected> Choose Profession Type</option> 
+                        <option value="Law",id="Law">Law</option>
+                        <option value="IT",id="IT">IT</option>
+                        <option value="Finance",id="Finance">Finance</option>
+                        <option value="Architecture",id="Architecture">Architecture</option>
+                        <option value="RealEstate",id="RealEstate">Real Estate</option>
+                        <option value="Photography",id="Photography">Photography</option>
+                      </select>
+
+                      <div class="mb-3">
+                        <div class="mb">
+                            <label for="contact" class="form-label">Specialization</label>
+                        </div>
+
+                    <select name="specialization" id="specialization">
+                        <option disable selected> Choose Specialization</option> 
+                        <option value="Family Law",id="Family Law">Family Law</option>
+                        <option value="Corporate Law",id="Corporate Law">Corporate Law</option>
+                        <option value=">Personal Injury Law",id=">Personal Injury Law">Personal Injury Law</option>
+                        <option value="Tailor",id="Tailor">Labour Law</option>
+                        <option value="Driver",id="Driver">Property Law</option>
+                        <option value="Plumber",id="Plumber">Immigration Law</option>
+                        <option value="Maid",id="Maid">Environment Law</option>
+                        <option value="Janitor",id="Janitor">Divorce Law</option>
+                        <option value="App Developer",id="App Developer">App Developer</option>
+                        <option value="Web Developer",id="Web Developer">Web Developer</option>
+                        <option value="Labourer",id="Labourer">Hardware</option>
+                        <option value="Others",id="Others">Software</option>
+                        <option value="Painter",id="Painter">Database</option>
+                        <option value="HouseCleaner",id="HouseCleaner">Cybersecurity</option>
+                        <option value="Labourer",id="Labourer">Cloud Computing</option>
+                        <option value="Classical Architecture",id="Classical Architecture">Classical Architecture</option>
+                        <option value="Painter",id="Painter">Gothic Architecture</option>
+                        <option value="Labourer",id="Labourer">Neoclassical Architecture</option>
+                        <option value="Others",id="Others">Modernist Architecture</option>
+                        <option value="Labourer",id="Labourer">Commercial Real Estate</option>
+                        <option value="Others",id="Others">Industrial Real Estate</option>
+                        <option value="Painter",id="Painter">Retail Real Estate</option>
+                        <option value="HouseCleaner",id="HouseCleaner">Residential Real Estate</option>
+                        <option value="Wildide Photographer",id="Wildide Photographer">Wildide Photographer</option>
+                        <option value="Wedding Photographer",id="Wedding Photographer">Wedding Photographer</option>
+                        <option value="Painter",id="Painter">Fashion Photographer</option>
+                        <option value="Painter",id="Painter">Street Photographer</option>
+                
+                        
+                      </select>
+
+<br>
+
+
+                    <div class="mb-3">
+                        <div class="mb">
+                            <label for="idlink" id="idlink" class="form-label">ID proof Link<span class="mb-3-text-muted"></span>
+                            </label>
+                        </div>
+                        <div class="content">
+                            <input type="text" class="form-control" placeholder=" idlink" name="idlink">
+                        </div>
+                    </div>
+
+                
+                    <div class="mb" method="post">
+                        <label>Office Address</label><br>
+                        <textarea class="form-control" name="address" id="address" placeholder="Text" cols="50%" rows="2"
+                            style="font-size: 15px;"></textarea>
+                    </div>
+                   
+                    
+                      <div class="mb-3">
+                        <div class="mb">
+                            <label for="contact" class="form-label">Experience In Years</label>
+                        </div>
+                        <div class="content">
+                            <input type="number" placeholder=" experience" class="form-control" id="experience"
+                                name="experience" style="font-size: 15px;">
+                        </div>
+                    </div>
+
+
+                    <button href="#" onclick="sendAlert()">Submit</button><br>
+
+                </form>
+               
+
+
+            </div>
+
+
+
+        </div>
+        <!-- <span>Already have an account? <a href="#" class="link login-link">Login</a> </span> -->
+
+        <!-- <div class="form-link">
+    <span>Already have an account? <a href="#" class="link login-link">Login</a> </span>
+</div> -->
+
+    </div>
+    <script src="https://kit.fontawesome.com/2b9cdc1c9a.js" crossorigin="anonymous"></script>
+
+    <script>
+        function sendAlert() { // console.log("button is working");
+            alert("Your Form is submitted!");
+        }
+    </script>
+
+</body>
+</body>
+
+</html>
